@@ -7,9 +7,6 @@ packages:
   gitUrl: https://github.com/siqagituser
   gitUsername: siqagituser
   gitBranch: main
-- name: WmJDBCAdapter
-  wpmServer: https://packages.webmethods.io
-  wpmRegistry: softwareag
 - name: SIQA_OriginTest_OnPremAssets
   gitServerName: siqagituser
   gitUrl: https://github.com/vijetadixit
@@ -20,6 +17,9 @@ packages:
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: softwareag
 services:
 - serviceName: project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
   packages:
@@ -42,10 +42,10 @@ configurationVariables:
   jdbc.jdbcTestPool.minConns: "0"
   ? artConnection.SIQA_0811Project.project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : Progress® DataDirect®
-  ? artConnection.SIQA_0811Project.project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
   ? artConnection.SIQA_0811Project.project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQA_0811Project.project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
   jdbc.jdbcTestPool.expireTime: "60000"
   ? artConnection.SIQA_0811Project.project.siqa_0811.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
   : "1"
